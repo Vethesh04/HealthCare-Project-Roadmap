@@ -1,8 +1,8 @@
 
 const form = document.getElementById("appointmentForm");
 
-const popup = document.getElementById("popup");
-const closePopup = document.getElementById("closePopup");
+
+
 
 
 form.addEventListener("submit", async function (e) {
@@ -78,63 +78,65 @@ form.addEventListener("submit", async function (e) {
             "Enter valid 10 digit number";
 
         valid = false;
-    }
+    };
 
 
     // ================= AGE =================
 
-    if (age === "") {
+    if (age === "") 
+        {
 
         valid = false;
 
-    } else if (age < 1 || age > 120) {
+    } 
+    else if (age < 1 || age > 120) {
 
         valid = false;
 
-        alert("Invalid age");
-    }
+        
+    };
 
 
     // ================= OTHER FIELDS =================
 
     if (gender === "") {
 
-        alert("Please select gender");
+        
 
         valid = false;
     }
 
     if (department === "") {
 
-        alert("Please select department");
+        
 
         valid = false;
     }
 
     if (doctor === "") {
 
-        alert("Please select doctor");
+        
 
         valid = false;
     }
 
     if (date === "") {
 
-        alert("Please select appointment date");
+       
 
         valid = false;
     }
 
     if (time === "") {
 
-        alert("Please select appointment time");
+        
 
         valid = false;
     }
 
     if (problem === "") {
 
-        alert("Please describe your health problem");
+        
 
         valid = false;
     }
@@ -204,18 +206,8 @@ form.addEventListener("submit", async function (e) {
                 "Unable to connect to server. Please start the backend."
             );
 
-        }
+        };
 
     }
 
 });
-
-
-// ================= CLOSE POPUP =================
-
-closePopup.addEventListener("click", function () {
-
-    popup.style.display = "none";
-
-});
-
