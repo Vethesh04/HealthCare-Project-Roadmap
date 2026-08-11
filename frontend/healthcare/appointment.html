@@ -1,8 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,8 +10,8 @@
 
     <link rel="stylesheet" href="../css/appointment.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
-
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
 </head>
 
 <body>
@@ -20,182 +20,353 @@
 
     <header>
         <nav class="navbar">
+
             <div class="logo">
-                <i class="fa-solid fa-heart-pulse "></i>
-                <span>HEALTHCARE+</span> 
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>HEALTHCARE+</span>
             </div>
+
             <div class="list">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./doctors.html">Doctor</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="./doctors.html">Doctor</a>
+                    </li>
+
+                    <li>
+                        <a href="./about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="./contact.html">Contact</a>
+                    </li>
                 </ul>
             </div>
-            <a href="appointment.html" class="btn">
+
+            <a href="./appointment.html" class="nav-btn">
                 Book Appointment
             </a>
+
         </nav>
     </header>
-    <!-- ================= HERO ================= -->
 
-    
 
-    <!-- ================= FORM ================= -->
+    <!-- ================= APPOINTMENT FORM ================= -->
 
     <section class="appointment">
 
         <div class="form-container">
 
-            <h2>Appointment Form</h2>
+            <div class="form-title">
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <h2>Book Your Appointment</h2>
+
+                <p>
+                    Fill in your details and choose your preferred doctor
+                </p>
+            </div>
+
 
             <form id="appointmentForm">
 
+                <!-- PATIENT NAME -->
+
                 <div class="input-box">
 
-                    <label>Patient Name</label>
+                    <label for="name">
+                        Patient Name
+                    </label>
 
-                    <input type="text" id="name" placeholder="Enter Full Name">
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter Full Name"
+                    >
+
                     <span class="error" id="nameError"></span>
+
                 </div>
+
+
+                <!-- EMAIL -->
 
                 <div class="input-box">
 
-                    <label>Email Address</label>
+                    <label for="email">
+                        Email Address
+                    </label>
 
-                    <input type="email" id="email" placeholder="Enter Email">
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter Email"
+                    >
+
                     <span class="error" id="emailError"></span>
+
                 </div>
+
+
+                <!-- PHONE -->
 
                 <div class="input-box">
 
-                    <label>Phone Number</label>
+                    <label for="phone">
+                        Phone Number
+                    </label>
 
-                    <input type="text" id="phone" placeholder="Enter Mobile Number">
+                    <input
+                        type="text"
+                        id="phone"
+                        maxlength="10"
+                        placeholder="Enter Mobile Number"
+                    >
+
                     <span class="error" id="phoneError"></span>
 
                 </div>
 
+
+                <!-- AGE -->
+
                 <div class="input-box">
 
-                    <label>Gender</label>
+                    <label for="age">
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="Enter Age"
+                        min="1"
+                        max="120"
+                    >
+
+                    <span class="error" id="ageError"></span>
+
+                </div>
+
+
+                <!-- GENDER -->
+
+                <div class="input-box">
+
+                    <label for="gender">
+                        Gender
+                    </label>
 
                     <select id="gender">
 
-                        <option value="">Select Gender</option>
+                        <option value="">
+                            Select Gender
+                        </option>
 
-                        <option>Male</option>
+                        <option value="Male">
+                            Male
+                        </option>
 
-                        <option>Female</option>
+                        <option value="Female">
+                            Female
+                        </option>
 
-                        <option>Other</option>
+                        <option value="Other">
+                            Other
+                        </option>
 
                     </select>
 
-                </div>
-
-                <div class="input-box"><span class="error" id="ageError"></span>    
-
-                    <label>Age</label>
-
-                    <input type="number" id="age" placeholder="Enter Age">
+                    <span class="error" id="genderError"></span>
 
                 </div>
+
+
+                <!-- DEPARTMENT -->
 
                 <div class="input-box">
-                    <label>Department</label>
+
+                    <label for="department">
+                        Department
+                    </label>
 
                     <select id="department">
 
-                        <option value="">Select Department</option>
+                        <option value="">
+                            Select Department
+                        </option>
 
-                        <option>Cardiology</option>
+                        <option value="Cardiology">
+                            Cardiology
+                        </option>
 
-                        <option>Neurology</option>
+                        <option value="Neurology">
+                            Neurology
+                        </option>
 
-                        <option>Orthopedics</option>
+                        <option value="Orthopedics">
+                            Orthopedics
+                        </option>
 
-                        <option>Pediatrics</option>
+                        <option value="Pediatrics">
+                            Pediatrics
+                        </option>
 
-                        <option>Dermatology</option>
+                        <option value="Dermatology">
+                            Dermatology
+                        </option>
 
-                        <option>General Medicine</option>
+                        <option value="General Medicine">
+                            General Medicine
+                        </option>
 
                     </select>
 
+                    <span class="error" id="departmentError"></span>
+
                 </div>
 
+
+                <!-- DOCTOR -->
+
                 <div class="input-box">
-                    <label>Select Doctor</label>
+
+                    <label for="doctor">
+                        Select Doctor
+                    </label>
 
                     <select id="doctor">
 
-                        <option value="">Choose Doctor</option>
+                        <option value="">
+                            Choose Doctor
+                        </option>
 
-                        <option>Dr. John</option>
+                        <option value="Dr. John">
+                            Dr. John
+                        </option>
 
-                        <option>Dr. Sarah</option>
+                        <option value="Dr. Sarah">
+                            Dr. Sarah
+                        </option>
 
-                        <option>Dr. David</option>
+                        <option value="Dr. David">
+                            Dr. David
+                        </option>
 
-                        <option>Dr. Emily</option>
+                        <option value="Dr. Emily">
+                            Dr. Emily
+                        </option>
 
                     </select>
 
-                </div>
-
-                <div class="input-box">   
-
-                    <label>Appointment Date</label>
-
-                    <input type="date" id="date">
+                    <span class="error" id="doctorError"></span>
 
                 </div>
+
+
+                <!-- DATE -->
 
                 <div class="input-box">
 
-                    <label>Preferred Time</label>
+                    <label for="date">
+                        Appointment Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="date"
+                    >
+
+                    <span class="error" id="dateError"></span>
+
+                </div>
+
+
+                <!-- TIME -->
+
+                <div class="input-box">
+
+                    <label for="time">
+                        Preferred Time
+                    </label>
 
                     <select id="time">
 
-                        <option value="">Choose Time</option>
+                        <option value="">
+                            Choose Time
+                        </option>
 
-                        <option>09:00 AM</option>
+                        <option value="09:00 AM">
+                            09:00 AM
+                        </option>
 
-                        <option>10:00 AM</option>
+                        <option value="10:00 AM">
+                            10:00 AM
+                        </option>
 
-                        <option>11:00 AM</option>
+                        <option value="11:00 AM">
+                            11:00 AM
+                        </option>
 
-                        <option>02:00 PM</option>
+                        <option value="02:00 PM">
+                            02:00 PM
+                        </option>
 
-                        <option>03:00 PM</option>
+                        <option value="03:00 PM">
+                            03:00 PM
+                        </option>
 
-                        <option>04:00 PM</option>
+                        <option value="04:00 PM">
+                            04:00 PM
+                        </option>
 
                     </select>
 
+                    <span class="error" id="timeError"></span>
+
                 </div>
+
+
+                <!-- HEALTH PROBLEM -->
 
                 <div class="input-box full">
 
-                    <label>Health Problem</label>
+                    <label for="problem">
+                        Health Problem
+                    </label>
 
-                    <textarea id="problem" rows="5" placeholder="Describe your problem"></textarea>
+                    <textarea
+                        id="problem"
+                        rows="5"
+                        placeholder="Describe your problem"
+                    ></textarea>
+
+                    <span class="error" id="problemError"></span>
 
                 </div>
 
+
+                <!-- BUTTONS -->
+
                 <div class="buttons">
 
-                    <button type="submit" class="btn">
-
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        <i class="fa-solid fa-calendar-check"></i>
                         Book Appointment
-
                     </button>
 
-                    <button type="reset" class="btn reset">
-
+                    <button
+                        type="reset"
+                        class="reset-btn"
+                    >
+                        <i class="fa-solid fa-rotate-left"></i>
                         Reset
-
                     </button>
 
                 </div>
@@ -205,6 +376,7 @@
         </div>
 
     </section>
+
 
     <!-- ================= SUCCESS POPUP ================= -->
 
@@ -217,36 +389,86 @@
             <h2>Appointment Booked!</h2>
 
             <p>
-
                 Thank you for choosing Health Care+.
                 Our team will contact you shortly.
-
             </p>
 
             <button id="closePopup">
-
                 OK
-
             </button>
 
         </div>
 
     </div>
 
+
     <!-- ================= FOOTER ================= -->
 
     <footer>
 
-        <p>
+        <div class="footer-content">
 
-            © 2026 Health Care+ | All Rights Reserved.
+            <div>
+                <h3>
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    HEALTHCARE+
+                </h3>
 
-        </p>
+                <p>
+                    Your health is our priority.
+                    Book appointments with trusted doctors easily.
+                </p>
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <a href="./index.html">Home</a>
+
+                <a href="./doctors.html">Doctors</a>
+
+                <a href="./about.html">About</a>
+
+                <a href="./contact.html">Contact</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    support@healthcare.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Health Care+ | All Rights Reserved.
+            </p>
+
+        </div>
 
     </footer>
+
 
     <script src="../javaScript/appointment.js"></script>
 
 </body>
 
 </html>
+

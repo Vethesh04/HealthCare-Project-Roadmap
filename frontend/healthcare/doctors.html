@@ -4,25 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Health Care+</title>
-    
+
+    <title>Health Care+ | Doctors</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/doctors.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
-        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <!-- JavaScript -->
+    <script src="../javaScript/doctors.js" defer></script>
 </head>
-<style>
-  
-</style>
 
 <body>
-    
-    <header>
+
+    <!-- ================= NAVBAR ================= -->
+  <header>
         <nav class="navbar">
+
             <div class="logo">
-                <i class="fa-solid fa-heart-pulse "></i>
-                <span>HEALTHCARE+</span> 
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>HEALTHCARE+</span>
             </div>
+
             <div class="list">
                 <ul>
                     <li><a href="./index.html">Home</a></li>
@@ -31,235 +41,562 @@
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </div>
-            <a href="appointment.html" class="btn1">
+
+            <a href="./appointment.html" class="nav-btn">
                 Book Appointment
             </a>
+
         </nav>
     </header>
 
-    <div class="topic-container">
-        <h1>Find Your Doctors</h1>
-    </div>
 
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="🔍 Search...">
+    <!-- ================= PAGE TITLE ================= -->
 
-        <div>
+    <section class="topic-container">
+
+        <p class="small-title">
+            <i class="fa-solid fa-user-doctor"></i>
+            OUR SPECIALISTS
+        </p>
+
+        <h1>Find Your Doctor</h1>
+
+        <p>
+            Find experienced and trusted doctors
+            for your healthcare needs.
+        </p>
+
+    </section>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <section class="search-container">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search doctor..."
+            >
+
+        </div>
+
+
+        <div class="select-box">
+
+            <i class="fa-solid fa-stethoscope"></i>
+
             <select id="specialization">
-                <option value="">All Specializations</option>
-                <option value="cardiologist">Cardiologist</option>
-                <option value="dentist">Dentist</option>
-                <option value="orthopedic">Orthopedic</option>
-                <option value="neurologist">Neurologist</option>
-                <option value="pediatrician">Pediatrician</option>
-                <option value="dermatologist">Dermatologist</option>
+
+                <option value="">
+                    All Specializations
+                </option>
+
+                <option value="Cardiologist">
+                    Cardiologist
+                </option>
+
+                <option value="Dentist">
+                    Dentist
+                </option>
+
+                <option value="Orthopedic">
+                    Orthopedic
+                </option>
+
+                <option value="Neurologist">
+                    Neurologist
+                </option>
+
+                <option value="Pediatrician">
+                    Pediatrician
+                </option>
+
+                <option value="Dermatologist">
+                    Dermatologist
+                </option>
+
             </select>
-        </div>
-    </div>
 
-    <div class="card-container">
-        <div class="doctor-card" data-specialization="Cardiologist">
-            <img src="../images/dr-k-subramanyan (1).avif">
-            <h2>Prof.Dr.K.Subramanyan</h2>
-            <p> <strong>Specialist-</strong>Cardiologist</p>
-            <p><strong>Experience-</strong>40+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
         </div>
 
-        <div class="doctor-card" data-specialization="Cardiologist">
-            <img src="../images/dr-muthukkumaran-real.avif">
-            <h2>Dr. S. Muthukkumaran</h2>
-            <p><strong>Specialist-</strong>Cardiologist</p>
-            <p><strong>Experience-</strong>15+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
+    </section>
+
+
+    <!-- ================= DOCTOR CARDS ================= -->
+
+    <main class="card-container">
+
+
+        <!-- CARD 1 -->
 
         <div class="doctor-card" data-specialization="Cardiologist">
-            <img src="../images/dr-durgadevi.avif">
-            <h2>Dr. Durgadevi</h2>
-            <p><strong>Specialist-</strong>Cardiologist</p>
-            <p><strong>Experience-</strong>10+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
+
+            <div class="doctor-image">
+
+                <img
+                    src="../images/dr-k-subramanyan (1).avif"
+                    alt="Prof. Dr. K. Subramanyan"
+                >
+
+                <span class="available">
+                    <i class="fa-solid fa-circle"></i>
+                    Available
+                </span>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <h2>Prof. Dr. K. Subramanyan</h2>
+
+                <p class="specialist">
+                    Cardiologist
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-briefcase"></i>
+                    40+ Years Experience
+                </p>
+
+                <a href="./appointment.html" class="book-btn">
+                    Book Appointment
+                </a>
+
+            </div>
+
         </div>
-        
+
+
+        <!-- CARD 2 -->
+
         <div class="doctor-card" data-specialization="Cardiologist">
-            <img src="../images/./dr-vijesh-anand-1782809215159.avif">
-            <h2>Dr. Vijesh Anand</h2>
-            <p><strong>Specialist-</strong>Cardiologist</p>
-            <p><strong>Experience-</strong>10+ Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
+
+            <div class="doctor-image">
+
+                <img
+                    src="../images/dr-muthukkumaran-real.avif"
+                    alt="Dr. S. Muthukkumaran"
+                >
+
+                <span class="available">
+                    <i class="fa-solid fa-circle"></i>
+                    Available
+                </span>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <h2>Dr. S. Muthukkumaran</h2>
+
+                <p class="specialist">
+                    Cardiologist
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-briefcase"></i>
+                    15+ Years Experience
+                </p>
+
+                <a href="./appointment.html" class="book-btn">
+                    Book Appointment
+                </a>
+
+            </div>
+
         </div>
-</div>
-    <div class="card-container">
-        <div class="doctor-card" data-specialization="Dentist">
-            <img src="../images/dr-k-subramanyan (1).avif">
-            <h2>Prof.Dr.K.Subramanyan</h2>
-            <p> <strong>Specialist-</strong>Dentist</p>
-            <p><strong>Experience-</strong>40+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
+
+
+        <!-- CARD 3 -->
+
+        <div class="doctor-card" data-specialization="Cardiologist">
+
+            <div class="doctor-image">
+
+                <img
+                    src="../images/dr-durgadevi.avif"
+                    alt="Dr. Durgadevi"
+                >
+
+                <span class="available">
+                    <i class="fa-solid fa-circle"></i>
+                    Available
+                </span>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <h2>Dr. Durgadevi</h2>
+
+                <p class="specialist">
+                    Cardiologist
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-briefcase"></i>
+                    10+ Years Experience
+                </p>
+
+                <a href="./appointment.html" class="book-btn">
+                    Book Appointment
+                </a>
+
+            </div>
+
         </div>
+
+
+        <!-- CARD 4 -->
+
+        <div class="doctor-card" data-specialization="Cardiologist">
+
+            <div class="doctor-image">
+
+                <img
+                    src="../images/dr-vijesh-anand-1782809215159.avif"
+                    alt="Dr. Vijesh Anand"
+                >
+
+                <span class="available">
+                    <i class="fa-solid fa-circle"></i>
+                    Available
+                </span>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <h2>Dr. Vijesh Anand</h2>
+
+                <p class="specialist">
+                    Cardiologist
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-briefcase"></i>
+                    10+ Years Experience
+                </p>
+
+                <a href="./appointment.html" class="book-btn">
+                    Book Appointment
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 5 -->
 
         <div class="doctor-card" data-specialization="Dentist">
-            <img src="../images/dr-muthukkumaran-real.avif">
-            <h2>Dr. S. Muthukkumaran</h2>
-            <p><strong>Specialist-</strong>Dentist</p>
-            <p><strong>Experience-</strong>15+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
+
+            <div class="doctor-image">
+
+                <img
+                    src="../images/dr-k-subramanyan (1).avif"
+                    alt="Prof. Dr. K. Subramanyan"
+                >
+
+                <span class="available">
+                    <i class="fa-solid fa-circle"></i>
+                    Available
+                </span>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <h2>Prof. Dr. K. Subramanyan</h2>
+
+                <p class="specialist">
+                    Dentist
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-briefcase"></i>
+                    40+ Years Experience
+                </p>
+
+                <a href="./appointment.html" class="book-btn">
+                    Book Appointment
+                </a>
+
+            </div>
+
         </div>
+
+
+        <!-- CARD 6 -->
 
         <div class="doctor-card" data-specialization="Dentist">
-            <img src="../images/dr-durgadevi.avif">
-            <h2>Dr. Durgadevi</h2>
-            <p><strong>Specialist-</strong>Dentist</p>
-            <p><strong>Experience-</strong>10+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
+
+            <div class="doctor-image">
+
+                <img
+                    src="../images/dr-muthukkumaran-real.avif"
+                    alt="Dr. S. Muthukkumaran"
+                >
+
+                <span class="available">
+                    <i class="fa-solid fa-circle"></i>
+                    Available
+                </span>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <h2>Dr. S. Muthukkumaran</h2>
+
+                <p class="specialist">
+                    Dentist
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-briefcase"></i>
+                    15+ Years Experience
+                </p>
+
+                <a href="./appointment.html" class="book-btn">
+                    Book Appointment
+                </a>
+
+            </div>
+
         </div>
-        
-        <div class="doctor-card" data-specialization="Dentist">
-            <img src="../images/./dr-vijesh-anand-1782809215159.avif">
-            <h2>Dr. Vijesh Anand</h2>
-            <p><strong>Specialist-</strong>Dentist</p>
-            <p><strong>Experience-</strong>10+ Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
-</div>
-    <div class="card-container">
-        <div class="doctor-card" data-specialization="Orthopedic">
-            <img src="../images/dr-k-subramanyan (1).avif">
-            <h2>Prof.Dr.K.Subramanyan</h2>
-            <p> <strong>Specialist-</strong>Orthopedic</p>
-            <p><strong>Experience-</strong>40+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
+
+
+        <!-- CARD 7 -->
 
         <div class="doctor-card" data-specialization="Orthopedic">
-            <img src="../images/dr-muthukkumaran-real.avif">
-            <h2>Dr. S. Muthukkumaran</h2>
-            <p><strong>Specialist-</strong>Orthopedic</p>
-            <p><strong>Experience-</strong>15+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
+
+            <div class="doctor-image">
+
+                <img
+                    src="../images/dr-durgadevi.avif"
+                    alt="Dr. Durgadevi"
+                >
+
+                <span class="available">
+                    <i class="fa-solid fa-circle"></i>
+                    Available
+                </span>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <h2>Dr. Durgadevi</h2>
+
+                <p class="specialist">
+                    Orthopedic
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-briefcase"></i>
+                    10+ Years Experience
+                </p>
+
+                <a href="./appointment.html" class="book-btn">
+                    Book Appointment
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="doctor-card" data-specialization="Orthopedic">
-            <img src="../images/dr-durgadevi.avif">
-            <h2>Dr. Durgadevi</h2>
-            <p><strong>Specialist-</strong>Orthopedic</p>
-            <p><strong>Experience-</strong>10+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
-        
-        <div class="doctor-card" data-specialization="Orthopedic">
-            <img src="../images/./dr-vijesh-anand-1782809215159.avif">
-            <h2>Dr. Vijesh Anand</h2>
-            <p><strong>Specialist-</strong>Orthopedic</p>
-            <p><strong>Experience-</strong>10+ Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
-</div>
 
-    <div class="card-container">
-        <div class="doctor-card" data-specialization="Neurologist">
-            <img src="../images/dr-k-subramanyan (1).avif">
-            <h2>Prof.Dr.c.vethesh</h2>
-            <p> <strong>Specialist-</strong>Neurologist</p>
-            <p><strong>Experience-</strong>40+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
-
-        <div class="doctor-card" data-specialization="Neurologist">
-            <img src="../images/dr-muthukkumaran-real.avif">
-            <h2>Dr. S. Muthukkumaran</h2>
-            <p><strong>Specialist-</strong>Neurologist</p>
-            <p><strong>Experience-</strong>15+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
+        <!-- CARD 8 -->
 
         <div class="doctor-card" data-specialization="Neurologist">
-            <img src="../images/dr-durgadevi.avif">
-            <h2>Dr. Durgadevi</h2>
-            <p><strong>Specialist-</strong>Neurologist</p>
-            <p><strong>Experience-</strong>10+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
-        
-        <div class="doctor-card" data-specialization="Neurologist">
-            <img src="../images/./dr-vijesh-anand-1782809215159.avif">
-            <h2>Dr. Vijesh Anand</h2>
-            <p><strong>Specialist-</strong>Neurologist</p>
-            <p><strong>Experience-</strong>10+ Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
-</div>
 
-    <div class="card-container">
+            <div class="doctor-image">
+
+                <img
+                    src="../images/dr-k-subramanyan (1).avif"
+                    alt="Prof. Dr. C. Vethesh"
+                >
+
+                <span class="available">
+                    <i class="fa-solid fa-circle"></i>
+                    Available
+                </span>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <h2>Prof. Dr. C. Vethesh</h2>
+
+                <p class="specialist">
+                    Neurologist
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-briefcase"></i>
+                    40+ Years Experience
+                </p>
+
+                <a href="./appointment.html" class="book-btn">
+                    Book Appointment
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARD 9 -->
+
         <div class="doctor-card" data-specialization="Pediatrician">
-            <img src="../images/dr-k-subramanyan (1).avif">
-            <h2>Prof.Dr.K.Subramanyan</h2>
-            <p> <strong>Specialist-</strong>Pediatrician</p>
-            <p><strong>Experience-</strong>40+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
+
+            <div class="doctor-image">
+
+                <img
+                    src="../images/dr-muthukkumaran-real.avif"
+                    alt="Dr. S. Muthukkumaran"
+                >
+
+                <span class="available">
+                    <i class="fa-solid fa-circle"></i>
+                    Available
+                </span>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <h2>Dr. S. Muthukkumaran</h2>
+
+                <p class="specialist">
+                    Pediatrician
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-briefcase"></i>
+                    15+ Years Experience
+                </p>
+
+                <a href="./appointment.html" class="book-btn">
+                    Book Appointment
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="doctor-card" data-specialization="Pediatrician">
-            <img src="../images/dr-muthukkumaran-real.avif">
-            <h2>Dr. S. Muthukkumaran</h2>
-            <p><strong>Specialist-</strong>Pediatrician</p>
-            <p><strong>Experience-</strong>15+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
 
-        <div class="doctor-card" data-specialization="Pediatrician">
-            <img src="../images/dr-durgadevi.avif">
-            <h2>Dr. Durgadevi</h2>
-            <p><strong>Specialist-</strong>Pediatrician</p>
-            <p><strong>Experience-</strong>10+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
-        
-        <div class="doctor-card" data-specialization="Pediatrician">
-            <img src="../images/./dr-vijesh-anand-1782809215159.avif">
-            <h2>Dr. Vijesh Anand</h2>
-            <p><strong>Specialist-</strong>Pediatrician</p>
-            <p><strong>Experience-</strong>10+ Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
-</div>
-    <div class="card-container">
-        <div class="doctor-card" data-specialization="Dermatologist">
-            <img src="../images/dr-k-subramanyan (1).avif">
-            <h2>Prof.Dr.K.Subramanyan</h2>
-            <p> <strong>Specialist-</strong>Dermatologis</p>
-            <p><strong>Experience-</strong>40+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
-
-        <div class="doctor-card" data-specialization="Dermatologist">
-            <img src="../images/dr-muthukkumaran-real.avif">
-            <h2>Dr. S. Muthukkumaran</h2>
-            <p><strong>Specialist-</strong>Dermatologis</p>
-            <p><strong>Experience-</strong>15+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
+        <!-- CARD 10 -->
 
         <div class="doctor-card" data-specialization="Dermatologist">
-            <img src="../images/dr-durgadevi.avif">
-            <h2>Dr. Durgadevi</h2>
-            <p><strong>Specialist-</strong>Dermatologis</p>
-            <p><strong>Experience-</strong>10+ Years Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
+
+            <div class="doctor-image">
+
+                <img
+                    src="../images/dr-durgadevi.avif"
+                    alt="Dr. Durgadevi"
+                >
+
+                <span class="available">
+                    <i class="fa-solid fa-circle"></i>
+                    Available
+                </span>
+
+            </div>
+
+            <div class="doctor-info">
+
+                <h2>Dr. Durgadevi</h2>
+
+                <p class="specialist">
+                    Dermatologist
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-briefcase"></i>
+                    10+ Years Experience
+                </p>
+
+                <a href="./appointment.html" class="book-btn">
+                    Book Appointment
+                </a>
+
+            </div>
+
         </div>
-        
-        <div class="doctor-card" data-specialization="Dermatologist">
-            <img src="../images/./dr-vijesh-anand-1782809215159.avif">
-            <h2>Dr.moorthy</h2>
-            <p><strong>Specialist-</strong>Dermatologis</p>
-            <p><strong>Experience-</strong>10+ Experience</p>
-            <a href="./appointment.html" class="btn">Book Appointment</a>
-        </div>
-</div>
 
 
-<script src="../javaScript/doctors.js" defer></script>
+        <!-- NO RESULT -->
+
+        <div id="noResult" class="no-result">
+
+            <i class="fa-solid fa-user-doctor"></i>
+
+            <h2>No Doctors Found</h2>
+
+            <p>
+                Try another doctor name or specialization.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <h2>
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    HEALTHCARE+
+                </h2>
+
+                <p>
+                    Quality healthcare with trusted
+                    doctors at your fingertips.
+                </p>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+
+                <a href="./index.html">Home</a>
+                <a href="./doctors.html">Doctors</a>
+                <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 98765 43210
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    support@healthcare.com
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 HealthCare+. All Rights Reserved.
+        </div>
+
+    </footer>
 </body>
 
 </html>

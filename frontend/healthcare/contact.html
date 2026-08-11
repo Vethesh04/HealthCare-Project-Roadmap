@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contact Us | Health Care+</title>
 
     <link rel="stylesheet" href="../css/contact.css">
@@ -14,73 +16,59 @@
 
 <body>
 
-    <!--========== Navbar ==========-->
-<header>
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
         <nav class="navbar">
+
             <div class="logo">
-                <i class="fa-solid fa-heart-pulse "></i>
-                <span>HEALTHCARE+</span> 
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>HEALTHCARE+</span>
             </div>
+
             <div class="list">
                 <ul>
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./doctors.html">Doctor</a></li>
                     <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./contact.html" class="active">Contact</a></li>
                 </ul>
             </div>
-            <a href="appointment.html" class="btn">
+
+            <a href="./appointment.html" class="btn">
                 Book Appointment
             </a>
+
         </nav>
     </header>
-    <!--========== Hero ==========-->
 
-    <!-- <section class="contact-banner">
 
-        <h1>Contact Us</h1>
-
-        <p>We're always here to help you.</p>
-
-    </section> -->
-
-    <!--========== Contact Cards ==========-->
+    <!-- ================= CONTACT INFO ================= -->
 
     <section class="contact-info">
 
         <div class="info-card">
-
             <i class="fa-solid fa-location-dot"></i>
-
             <h3>Address</h3>
-
             <p>123 Anna Salai, Chennai, Tamil Nadu</p>
-
         </div>
 
         <div class="info-card">
-
             <i class="fa-solid fa-phone"></i>
-
             <h3>Phone</h3>
-
             <p>+91 9876543210</p>
-
         </div>
 
         <div class="info-card">
-
             <i class="fa-solid fa-envelope"></i>
-
             <h3>Email</h3>
-
             <p>healthcare@gmail.com</p>
-
         </div>
 
     </section>
 
-    <!--========== Contact Form ==========-->
+
+    <!-- ================= CONTACT FORM ================= -->
 
     <section class="contact">
 
@@ -93,27 +81,30 @@
                 <input
                     type="text"
                     id="name"
-                    placeholder="Your Name">
+                    placeholder="Your Name"
+                    required>
 
                 <input
                     type="email"
                     id="email"
-                    placeholder="Your Email">
+                    placeholder="Your Email"
+                    required>
 
                 <input
                     type="text"
                     id="subject"
-                    placeholder="Subject">
+                    placeholder="Subject"
+                    required>
 
                 <textarea
                     id="message"
                     rows="6"
-                    placeholder="Your Message"></textarea>
+                    placeholder="Your Message"
+                    required></textarea>
 
                 <button type="submit">
-
+                    <i class="fa-solid fa-paper-plane"></i>
                     Send Message
-
                 </button>
 
             </form>
@@ -122,7 +113,8 @@
 
     </section>
 
-    <!--========== Map ==========-->
+
+    <!-- ================= MAP ================= -->
 
     <section class="map">
 
@@ -133,32 +125,87 @@
 
     </section>
 
-    <!--========== Footer ==========-->
+
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
-        <div class="social">
+        <div class="footer-container">
 
-            <i class="fab fa-facebook"></i>
+            <div class="footer-about">
 
-            <i class="fab fa-instagram"></i>
+                <i class="fa-solid fa-heart-pulse"></i>
 
-            <i class="fab fa-twitter"></i>
+                <h2>HEALTHCARE+</h2>
 
-            <i class="fab fa-linkedin"></i>
+                <p>
+                    Your health is our priority.
+                    We provide quality healthcare
+                    with trusted doctors.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="./index.html">Home</a>
+                <a href="./doctors.html">Doctors</a>
+                <a href="./about.html">About</a>
+                <a href="./appointment.html">Appointment</a>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 9876543210
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    healthcare@gmail.com
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Chennai, Tamil Nadu
+                </p>
+
+            </div>
+
+
+            <div class="social">
+
+                <h3>Follow Us</h3>
+
+                <div>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+
+            </div>
 
         </div>
 
-        <p>
 
+        <div class="footer-bottom">
             © 2026 Health Care+ | All Rights Reserved
-
-        </p>
+        </div>
 
     </footer>
+
 
     <script src="../javaScript/contact.js"></script>
 
 </body>
-
 </html>
+
