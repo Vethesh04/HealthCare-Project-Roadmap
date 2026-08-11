@@ -1,0 +1,312 @@
+/* ==========================
+   Google Font
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        /* margin-top: 2px; */
+        background: #7bb9d1;
+        background: linear-gradient(90deg, rgb(28, 109, 141) 0%, rgb(134, 209, 217) 51%, rgb(39, 171, 223) 100%)
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        box-shadow: 2px 3px 5px;
+        padding: 16px 20px;
+
+
+    }
+
+    .logo {
+        font-size: 30px;
+        font-weight: bolder;
+        margin-top: 15px;
+        text-shadow:2px 3px 5px rgb(244, 240, 240);
+    }
+ 
+
+    .list>ul {
+        display: flex;
+        gap: 50px;
+        padding: 20px;
+        list-style: none;
+        border-radius: 20px;
+
+
+
+    }
+
+    .list ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px;
+        transition: all 0.5s ease;
+        background-color: #fbfcfd;
+    }
+
+    .list ul li a:hover {
+        color: #dfe8ed;
+        background-color: #0077b6;
+    }
+
+    .btn {
+        padding: 20px;
+        background-color: #0485ca;
+        color: rgb(18, 18, 18);
+        border: none;
+        box-shadow: 2px 3px 5px;
+        display:inline-block;
+        text-align: center;
+        font-weight: bolder;
+        text-decoration: none;
+        border-radius: 40px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+
+    .btn:hover {
+        background-color: #128ba3;
+        color: white;
+        transform: scale(1.05);
+    }
+    .error{
+    color:red;
+    font-size:14px;
+    margin-top:5px;
+    display:block;
+}
+
+
+
+/* ==========================
+   Form Section
+========================== */
+
+.appointment{
+    padding:70px 0;
+}
+
+.form-container{
+    width:80%;
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.form-container h2{
+    text-align:center;
+    color:#0b7dda;
+    margin-bottom:35px;
+}
+
+form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.input-box{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-box label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea{
+    padding:14px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    transition:.3s;
+    font-size:15px;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus{
+    border-color:#0b7dda;
+    box-shadow:0 0 8px rgba(11,125,218,.2);
+}
+
+.full{
+    grid-column:1/3;
+}
+
+textarea{
+    resize:none;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.buttons{
+    grid-column:1/3;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.btn{
+    background:#0b7dda;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+    font-size:16px;
+}
+
+.btn:hover{
+    background:#0864b0;
+}
+
+.reset{
+    background:#dc3545;
+}
+
+.reset:hover{
+    background:#b02a37;
+}
+
+/* ==========================
+   Popup
+========================== */
+
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:white;
+    width:350px;
+    text-align:center;
+    padding:35px;
+    border-radius:15px;
+    animation:popup .4s ease;
+}
+
+@keyframes popup{
+
+    from{
+        transform:scale(.5);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.popup-content i{
+    font-size:70px;
+    color:#28a745;
+    margin-bottom:20px;
+}
+
+.popup-content h2{
+    color:#0b7dda;
+    margin-bottom:10px;
+}
+
+.popup-content p{
+    margin-bottom:25px;
+}
+
+.popup-content button{
+    padding:12px 35px;
+    background:#0b7dda;
+    color:white;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+/* ==========================
+   Footer
+========================== */
+
+footer{
+    background:#062b4f;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:992px){
+
+.form-container{
+    width:90%;
+}
+
+form{
+    grid-template-columns:1fr;
+}
+
+.full{
+    grid-column:auto;
+}
+
+.buttons{
+    grid-column:auto;
+    flex-direction:column;
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-top:15px;
+}
+
+.appointment-banner h1{
+    font-size:32px;
+}
+
+.form-container{
+    padding:25px;
+}
+
+}
