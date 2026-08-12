@@ -13,7 +13,7 @@ const appointmentSchema = new mongoose.Schema(
         },
 
         phone: {
-            type: String,
+            type: Number,
             required: true
         },
 
@@ -51,7 +51,7 @@ const appointmentSchema = new mongoose.Schema(
 
         problem: {
             type: String,
-            required: true
+            required: false
         }
     },
 

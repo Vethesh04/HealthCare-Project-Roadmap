@@ -6,7 +6,7 @@ const popup = document.getElementById("popup");
 const closePopup = document.getElementById("closePopup");
 
 
-form.addEventListener("submit", async function (e) {
+form.addEventListener("submit", async function () {
 
     e.preventDefault();
 
