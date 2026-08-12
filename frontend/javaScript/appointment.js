@@ -1,3 +1,6 @@
+// ===============================
+// Appointment Form
+// ===============================
 
 const form = document.getElementById("appointmentForm");
 
@@ -6,45 +9,63 @@ const popup = document.getElementById("popup");
 const closePopup = document.getElementById("closePopup");
 
 
-form.addEventListener("submit", async function () {
+// ===============================
+// FORM SUBMIT
+// ===============================
+
+form.addEventListener("submit", async function (e) {
 
     e.preventDefault();
 
-
-    // ================= CLEAR ERRORS =================
+    // ===============================
+    // CLEAR ERRORS
+    // ===============================
 
     document.querySelectorAll(".error").forEach(error => {
         error.innerHTML = "";
     });
-
-
+    
     let valid = true;
 
 
-    // ================= GET VALUES =================
+    // ===============================
+    // GET VALUES
+    // ===============================
 
-    const name = document.getElementById("name").value.trim();
+    const name =
+        document.getElementById("name").value.trim();
 
-    const email = document.getElementById("email").value.trim();
+    const email =
+        document.getElementById("email").value.trim();
 
-    const phone = document.getElementById("phone").value.trim();
+    const phone =
+        document.getElementById("phone").value.trim();
 
-    const age = document.getElementById("age").value.trim();
+    const age =
+        document.getElementById("age").value.trim();
 
-    const gender = document.getElementById("gender").value;
+    const gender =
+        document.getElementById("gender").value;
 
-    const department = document.getElementById("department").value;
+    const department =
+        document.getElementById("department").value;
 
-    const doctor = document.getElementById("doctor").value;
+    const doctor =
+        document.getElementById("doctor").value;
 
-    const date = document.getElementById("date").value;
+    const date =
+        document.getElementById("date").value;
 
-    const time = document.getElementById("time").value;
+    const time =
+        document.getElementById("time").value;
 
-    const problem = document.getElementById("problem").value.trim();
+    const problem =
+        document.getElementById("problem").value.trim();
 
 
-    // ================= NAME =================
+    // ===============================
+    // NAME VALIDATION
+    // ===============================
 
     if (name === "") {
 
@@ -55,13 +76,14 @@ form.addEventListener("submit", async function () {
     }
 
 
-    // ================= EMAIL =================
+    // ===============================
+    // EMAIL VALIDATION
+    // ===============================
 
     const emailPattern =
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
-    if (email === "") {
+ if (email === "") {
 
         document.getElementById("emailError").innerHTML =
             "Email is required";
@@ -77,12 +99,13 @@ form.addEventListener("submit", async function () {
     }
 
 
-    // ================= PHONE =================
+    // ===============================
+    // PHONE VALIDATION
+    // ===============================
 
     const phonePattern = /^[6-9]\d{9}$/;
 
-
-    if (phone === "") {
+if (phone === "") {
 
         document.getElementById("phoneError").innerHTML =
             "Phone number is required";
@@ -98,7 +121,9 @@ form.addEventListener("submit", async function () {
     }
 
 
-    // ================= AGE =================
+    // ===============================
+    // AGE VALIDATION
+    // ===============================
 
     if (age === "") {
 
@@ -116,7 +141,9 @@ form.addEventListener("submit", async function () {
     }
 
 
-    // ================= GENDER =================
+    // ===============================
+    // GENDER
+    // ===============================
 
     if (gender === "") {
 
@@ -127,7 +154,9 @@ form.addEventListener("submit", async function () {
     }
 
 
-    // ================= DEPARTMENT =================
+    // ===============================
+    // DEPARTMENT
+    // ===============================
 
     if (department === "") {
 
@@ -138,7 +167,9 @@ form.addEventListener("submit", async function () {
     }
 
 
-    // ================= DOCTOR =================
+    // ===============================
+    // DOCTOR
+    // ===============================
 
     if (doctor === "") {
 
@@ -149,7 +180,9 @@ form.addEventListener("submit", async function () {
     }
 
 
-    // ================= DATE =================
+    // ===============================
+    // DATE
+    // ===============================
 
     if (date === "") {
 
@@ -160,7 +193,9 @@ form.addEventListener("submit", async function () {
     }
 
 
-    // ================= TIME =================
+    // ===============================
+    // TIME
+    // ===============================
 
     if (time === "") {
 
@@ -171,7 +206,9 @@ form.addEventListener("submit", async function () {
     }
 
 
-    // ================= PROBLEM =================
+    // ===============================
+    // PROBLEM
+    // ===============================
 
     if (problem === "") {
 
@@ -182,24 +219,29 @@ form.addEventListener("submit", async function () {
     }
 
 
-    // ================= SEND TO BACKEND =================
+    // ===============================
+    // STOP IF INVALID
+    // ===============================
 
     if (!valid) {
         return;
     }
 
 
+    // ===============================
+    // DATA FOR BACKEND
+    // ===============================
+
     const appointmentData = {
 
         name: name,
 
         email: email,
-
-        phone: phone,
-
-        gender: gender,
+     phone: phone,
 
         age: Number(age),
+
+        gender: gender,
 
         department: department,
 
@@ -212,6 +254,10 @@ form.addEventListener("submit", async function () {
         problem: problem
     };
 
+
+    // ===============================
+    // SEND TO BACKEND
+    // ===============================
 
     try {
 
@@ -232,6 +278,10 @@ form.addEventListener("submit", async function () {
         const result = await response.json();
 
 
+        // ===============================
+        // SUCCESS
+        // ===============================
+
         if (response.ok) {
 
             console.log(
@@ -239,13 +289,17 @@ form.addEventListener("submit", async function () {
                 result
             );
 
-
-            form.reset();
-
+         form.reset();
 
             popup.style.display = "flex";
 
-        } else {
+        }
+
+        // ===============================
+        // BACKEND ERROR
+        // ===============================
+
+        else {
 
             alert(
                 result.message ||
@@ -261,8 +315,7 @@ form.addEventListener("submit", async function () {
             error
         );
 
-
-        alert(
+    alert(
             "Unable to connect to server. Please start the backend."
         );
     }
@@ -270,7 +323,9 @@ form.addEventListener("submit", async function () {
 });
 
 
-// ================= CLOSE POPUP =================
+// ===============================
+// CLOSE POPUP
+// ===============================
 
 closePopup.addEventListener("click", function () {
 
@@ -279,7 +334,9 @@ closePopup.addEventListener("click", function () {
 });
 
 
-// ================= CLICK OUTSIDE POPUP =================
+// ===============================
+// CLICK OUTSIDE POPUP
+// ===============================
 
 popup.addEventListener("click", function (e) {
 
@@ -292,17 +349,23 @@ popup.addEventListener("click", function (e) {
 });
 
 
-// ================= MINIMUM DATE =================
+// ===============================
+// MINIMUM DATE = TODAY
+// ===============================
 
-const dateInput = document.getElementById("date");
+const dateInput =
+    document.getElementById("date");
 
 const today = new Date();
 
-const year = today.getFullYear();
+const year =
+    today.getFullYear();
 
-const month = String(today.getMonth() + 1).padStart(2, "0");
+const month =
+    String(today.getMonth() + 1).padStart(2, "0");
 
-const day = String(today.getDate()).padStart(2, "0");
+const day =
+    String(today.getDate()).padStart(2, "0");
 
-dateInput.min = `${year}-${month}-${day}`;
-
+dateInput.min =
+    `${year}-${month}-${day}`;
