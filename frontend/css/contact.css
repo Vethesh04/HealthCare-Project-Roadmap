@@ -15,121 +15,137 @@ body {
 /* ================= NAVBAR ================= */
 
 header {
+    width: 100%;
+
     position: fixed;
+
     top: 0;
     left: 0;
-    width: 100%;
+
     z-index: 1000;
 
     background: linear-gradient(
         90deg,
-        rgb(28, 109, 141) 0%,
-        rgb(134, 209, 217) 51%,
-        rgb(39, 171, 223) 100%
+        rgb(28, 109, 141),
+        rgb(134, 209, 217),
+        rgb(39, 171, 223)
     );
 
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
+
 .navbar {
     width: 100%;
-    min-height: 90px;
+
+    min-height: 80px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-around;
 
     padding: 12px 20px;
 }
 
 
-/* ================= LOGO ================= */
+/* LOGO */
 
 .logo {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 
     font-size: 28px;
-    font-weight: bold;
+
+    font-weight: 700;
 
     text-shadow: 2px 3px 5px white;
 }
 
+
 .logo i {
-    font-size: 32px;
     color: white;
+
+    font-size: 32px;
 }
 
 
-/* ================= NAV LINKS ================= */
+/* NAVIGATION */
 
 .list ul {
     display: flex;
-    align-items: center;
 
-    gap: 35px;
+    gap: 30px;
 
     list-style: none;
 }
 
+
 .list ul li a {
-    display: inline-block;
+    display: block;
 
-    text-decoration: none;
-
-    color: black;
-
-    font-size: 17px;
-    font-weight: bold;
-
-    padding: 12px 18px;
+    padding: 10px 17px;
 
     background: white;
 
-    border-radius: 20px;
-
-    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.3);
-
-    transition: 0.3s;
-}
-
-.list ul li a:hover,
-.list ul li a.active {
-    color: white;
-    background: #0077b6;
-
-    transform: translateY(-2px);
-}
-
-
-/* ================= BUTTON ================= */
-
-.btn {
-    display: inline-block;
-
-    padding: 15px 22px;
-
-    background: #0485ca;
-    color: black;
+    color: #111;
 
     text-decoration: none;
 
-    font-weight: bold;
+    font-size: 16px;
 
-    border-radius: 40px;
+    font-weight: 600;
 
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
 
-    transition: 0.3s;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s ease;
 }
 
-.btn:hover {
-    background: #128ba3;
+
+.list ul li a:hover {
+    background: #0077b6;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* NAV BUTTON */
+
+.nav-btn {
+    padding: 13px 20px;
+
+    background: #0485ca;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    border-radius: 30px;
+
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s ease;
+}
+
+
+.nav-btn:hover {
+    background: #075985;
+
     color: white;
 
     transform: scale(1.05);
 }
+
 
 
 /* ================= CONTACT INFO ================= */

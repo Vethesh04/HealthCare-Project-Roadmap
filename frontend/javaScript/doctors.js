@@ -5,6 +5,7 @@ const doctorCards = document.querySelectorAll(".doctor-card");
 const noResult = document.getElementById("noResult");
 
 
+ 
 function filterDoctors() {
 
     const searchValue =
