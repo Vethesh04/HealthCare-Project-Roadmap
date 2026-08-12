@@ -197,3 +197,29 @@ contactForm.addEventListener("submit", async function (event) {
     }
 
 });
+
+// ================= ACTIVE NAVBAR =================
+
+const currentPage =
+    window.location.pathname.split("/").pop();
+
+const navLinks =
+    document.querySelectorAll(".list ul li a");
+
+
+navLinks.forEach(link => {
+
+    const linkPage =
+        link.getAttribute("href")
+            .split("/")
+            .pop();
+
+
+    if (linkPage === currentPage) {
+
+        link.style.background = "#0077b6";
+
+        link.style.color = "white";
+    }
+
+});
